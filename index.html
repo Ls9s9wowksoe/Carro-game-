@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<title>Car Dodge 50s</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div id="startScreen" class="screen active">
+  <h1>Corrida de Desviar</h1>
+  <button id="startBtn" class="primary">Jogar</button>
+</div>
+
+<div id="gameUI" class="screen">
+  <div id="hud">
+    <span>Tempo: <span id="timeDisplay">50.0</span>s</span>
+  </div>
+  <canvas id="gameCanvas" width="480" height="640" aria-label="Jogo de desviar com carro"></canvas>
+  <div id="controls">
+    <button id="upBtn" aria-label="Mover para cima">▲</button>
+    <button id="downBtn" aria-label="Mover para baixo">▼</button>
+  </div>
+</div>
+
+<div id="winScreen" class="screen">
+  <h1>Você Venceu!</h1>
+  <p>Sobreviveu por 50 segundos. Parabéns!</p>
+  <button class="primary restartBtn">Jogar de Novo</button>
+</div>
+
+<div id="gameOverScreen" class="screen">
+  <h1>Game Over</h1>
+  <p>O carro bateu em um obstáculo.</p>
+  <button class="primary restartBtn">Tentar Novamente</button>
+</div>
+
+<script src="game.js"></script>
+</body>
+</html>
